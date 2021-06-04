@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "gcRwrD2Kn//eblTEZ/egBCPWlJ46g2httpxzgxrqFhDfqOrnK3Wa6ck3Il5GmB+oq+uh1VW+7CSex1B9DpTlNQ==",
+  "dgSpecHash": "EmYuvR+jYICv1BCXgZ9/vza4CnWkbxkn8KMWG0AMtxH4E5inV5y3a7RO1rQNT7N+HQatN5FFUbiJgXh/CprhRw==",
   "success": true,
-  "projectFilePath": "C:\\repos\\C-shenanigans\\PoWebAPI\\PoWebAPI\\PoWebAPI.csproj",
+  "projectFilePath": "C:\\repos\\PoWebAPI\\PoWebAPI\\PoWebAPI.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Charles.Traylor\\.nuget\\packages\\microsoft.aspnetcore.html.abstractions\\2.2.0\\microsoft.aspnetcore.html.abstractions.2.2.0.nupkg.sha512",
     "C:\\Users\\Charles.Traylor\\.nuget\\packages\\microsoft.aspnetcore.razor\\2.2.0\\microsoft.aspnetcore.razor.2.2.0.nupkg.sha512",

@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\repos\\C-shenanigans\\PoWebAPI\\PoWebAPI\\PoWebAPI.csproj": {}
+    "C:\\repos\\PoWebAPI\\PoWebAPI\\PoWebAPI.csproj": {}
   },
   "projects": {
-    "C:\\repos\\C-shenanigans\\PoWebAPI\\PoWebAPI\\PoWebAPI.csproj": {
+    "C:\\repos\\PoWebAPI\\PoWebAPI\\PoWebAPI.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\repos\\C-shenanigans\\PoWebAPI\\PoWebAPI\\PoWebAPI.csproj",
+        "projectUniqueName": "C:\\repos\\PoWebAPI\\PoWebAPI\\PoWebAPI.csproj",
         "projectName": "PoWebAPI",
-        "projectPath": "C:\\repos\\C-shenanigans\\PoWebAPI\\PoWebAPI\\PoWebAPI.csproj",
+        "projectPath": "C:\\repos\\PoWebAPI\\PoWebAPI\\PoWebAPI.csproj",
         "packagesPath": "C:\\Users\\Charles.Traylor\\.nuget\\packages\\",
-        "outputPath": "C:\\repos\\C-shenanigans\\PoWebAPI\\PoWebAPI\\obj\\",
+        "outputPath": "C:\\repos\\PoWebAPI\\PoWebAPI\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\Charles.Traylor\\AppData\\Roaming\\NuGet\\NuGet.Config",

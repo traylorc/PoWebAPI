@@ -21,6 +21,25 @@ namespace PoWebAPI.Controllers
             _context = context;
         }
 
+       //async has to return a task at minimum
+       //
+        private async Task PoGrandTotal(int poid)
+        {
+            var po = await _context.PurchaseOrders.FindAsync(poid);
+            if (po == null) throw new Exception("fatal: po is not found to recalculate");
+
+            var poTotalx = (from l in _context.Polines
+                    join i in _context.Items
+                    on l.ItemId equals i.Id
+                    where l.PurchaseOrderId == poid
+                    select new {LineTotal = l.Quantity * i.Price}).Sum(x => x.LineTotal);
+
+            po.Total = poTotalx;
+            await _context.SaveChangesAsync();
+                     
+        }
+
+
         // GET: api/Polines
         [HttpGet]
         public async Task<ActionResult<IEnumerable<Poline>>> GetPolines()
@@ -58,6 +77,7 @@ namespace PoWebAPI.Controllers
             try
             {
                 await _context.SaveChangesAsync();
+                await PoGrandTotal(poline.PurchaseOrderId);
             }
             catch (DbUpdateConcurrencyException)
             {
@@ -82,6 +102,7 @@ namespace PoWebAPI.Controllers
         {
             _context.Polines.Add(poline);
             await _context.SaveChangesAsync();
+            await PoGrandTotal(poline.PurchaseOrderId);
 
             return CreatedAtAction("GetPoline", new { id = poline.Id }, poline);
         }
@@ -98,7 +119,7 @@ namespace PoWebAPI.Controllers
 
             _context.Polines.Remove(poline);
             await _context.SaveChangesAsync();
-
+            await PoGrandTotal(poline.PurchaseOrderId);
             return poline;
         }
 
